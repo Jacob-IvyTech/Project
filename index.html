@@ -1,85 +1,64 @@
-<!DOCTYPE html>
-<html>
 <body>
-  <h1>
-    The Controversial Record of Punxsutawney Phil
-  </h1>
-  <h2>
-    Who is Punxsutawney Phil?
-  </h2>
-  <p>
-    Blah
-  </p>
-  <h2>
-    Ongoing Controversy
-  </h2>
-  <h3>
-    First Incident
-  </h3>
-  <p>
-    Info on first incident
-  </p>
-  <h3>
-    Backlash
-  </h3>
-  <p>
-    Joke words on backlash
-  </p>
-  <h2>
-    Recent Record
-  </h2>
-  <p>
-    Statistics
-  </p>
-  <h2>
-    What is to be done about Punxatawney Phil?
-  </h2>
-  <h3>
-    Elixir of Life
-  </h3>
-  <p>
-    Info on Elixir
-  </p>
-  <h3>
-    Alternative Sources of Information
-  </h3>
-  <dl>
-      <dt> -Potomac Phil</dt>
-      <dd> Washington DC</dd>
-      <dt> -Other source</dt>
-      <dd> Info on that</dd>
-  </dl>
-<!--code source: W3 Schools-->
-<h1>Coundown to Next Lie</h1>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<h2 id="countdown"></h2>
-<script>
-  var countDownDate = new Date("Feb 2, 2027 08:00:00").getTime();
+  <div>
+    <aside>
+      <a class="logo" href="index.html"> </a>
+      <header>
+        <a href="logo.jpg"alt="homepage logo"
+      </header>
 
-// Update the count down every 1 second
-var x = setInterval(function() {
+        <nav class="main-navigation" aria-label="Main navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="history.html">History</a></li>
+          <li><a href="controversy.html">Controversy</a></li>
+          <li><a href="predictions.html">Predictions</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </aside>
 
-  // Get today's date and time
-  var now = new Date().getTime();
+    <main>
+      <h1>The Controversial Record of Punxsutawney Phil</h1>
 
-  // Find the distance between now and the count down date
-  var distance = countDownDate - now;
+      <h2>Who is Punxsutawney Phil?</h2>
+      <p>Blah</p>
 
-  // Time calculations for days, hours, minutes and seconds
-  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-    // Display the result in the element with id="demo"
-  document.getElementById("countdown").innerHTML = days + "d " + hours + "h "
-  + minutes + "m " + seconds + "s ";
+      <h2>Ongoing Controversy</h2>
 
-  // If the count down is finished, write some text
-  if (distance < 0) {
-    clearInterval(x);
-    document.getElementById("countdown").innerHTML = "EXPIRED";
-  }
-}, 1000);
-</script>
- </body>
-</html>
+      <h3>First Incident</h3>
+      <p>Info on first incident</p>
+
+      <h3>Backlash</h3>
+      <p>Joke words on backlash</p>
+
+      <h2>Recent Record</h2>
+      <p>Statistics</p>
+
+      <h2>What Is to Be Done About Punxsutawney Phil?</h2>
+
+      <h3>Elixir of Life</h3>
+      <p>Info on Elixir</p>
+
+      <h3>Alternative Sources of Information</h3>
+
+      <dl>
+        <dt>Potomac Phil</dt>
+        <dd>Washington, D.C.</dd>
+
+        <dt>Other source</dt>
+        <dd>Info on that source</dd>
+      </dl>
+
+      <section>
+        <h2>Countdown to Next Lie</h2>
+        <p id="countdown"> </p>
+      </section>
+    </main>
+
+    <footer>
+      <p>To be added to later</p>
+    </footer>
+  </div>
+
+  <script src="script.js" defer></script>
+</body>
