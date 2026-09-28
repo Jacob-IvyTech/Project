@@ -1,18 +1,20 @@
-
+* {
+  box-sizing: border-box;
+}
 
 body {
   margin: 0;
-  padding: 100px;
+  padding: 100px 20px;
+
   color: #222;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 18px;
   line-height: 1.6;
-  background-color: #d9edf7;
 
-  background-image: 
+  background-color: #d9edf7;
+  background-image:
     url("left-image.JPG"),
     url("right-image.JPG");
-
   background-repeat: no-repeat, no-repeat;
   background-position: left top, right top;
   background-attachment: fixed, fixed;
@@ -20,20 +22,21 @@ body {
 }
 
 body > div {
-  width: min(900px, calc(100% - 40px));
-  margin: 0 auto;
-  background-color: white;
+  width: min(900px, 100%);
   min-height: 100vh;
+  margin: 0 auto;
+  background-color: tan;
+  border-radius: 8px;
+  box-shadow: 0 0 18px rgba(0, 0, 0, 0.35);
 }
+
 .document {
   width: 100%;
   max-width: 1100px;
   margin: 0 auto;
   padding: 32px;
-
   background-color: #eee0ab;
   border-radius: 8px;
-  box-shadow: 0 0 18px rgba(0, 0, 0, 0.35);
 }
 
 .site-header {
@@ -264,7 +267,6 @@ textarea {
     font-size: 16px;
     background-image: none;
     background-color: #d9edf7;
-  @media (max-width: 700px) 
   
   body > div {
     width: 100%;
