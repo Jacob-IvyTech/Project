@@ -1,4 +1,5 @@
 
+
 body {
   margin: 0;
   padding: 100px;
@@ -6,11 +7,23 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 18px;
   line-height: 1.6;
+  background-color: #d9edf7;
+
+  background-image: 
+    url("left-image.JPG"),
+    url("right-image.JPG");
+
+  background-repeat: no-repeat, no-repeat;
+  background-position: left top, right top;
+  background-attachment: fixed, fixed;
+  background-size: 250px auto, 250px auto;
 }
-.logo img {
-  display: block;
-  max-width: 100%;
-  height: auto;
+
+body > div {
+  width: min(900px, calc(100% - 40px));
+  margin: 0 auto;
+  background-color: white;
+  min-height: 100vh;
 }
 .document {
   width: 100%;
@@ -72,11 +85,6 @@ body {
   background-color: #460046;
   text-decoration: underline;
 }
-
-/* ------------------------------
-   Headings and text
------------------------------- */
-
 h1,
 h2,
 h3 {
@@ -120,8 +128,6 @@ a:focus {
   color: #003b66;
 }
 
-/* Visible keyboard focus */
-
 a:focus,
 button:focus,
 input:focus,
@@ -130,10 +136,6 @@ select:focus {
   outline: 3px solid #ff9900;
   outline-offset: 3px;
 }
-
-/* ------------------------------
-   Images
------------------------------- */
 
 img {
   display: block;
@@ -155,10 +157,6 @@ img {
   text-align: center;
 }
 
-/* ------------------------------
-   Cards and call-to-action area
------------------------------- */
-
 .content-card {
   margin: 24px 0;
   padding: 22px;
@@ -166,15 +164,6 @@ img {
   background-color: #f4eafa;
   border-left: 6px solid #6c006c;
   border-radius: 5px;
-}
-
-.call-to-action {
-  margin: 28px 0;
-  padding: 24px;
-
-  background-color: #c8f2ec;
-  border: 2px solid #17776e;
-  border-radius: 6px;
 }
 
 .button,
@@ -200,10 +189,6 @@ button:focus {
   background-color: #460046;
 }
 
-/* ------------------------------
-   Countdown
------------------------------- */
-
 #countdown {
   max-width: 700px;
   margin: 20px auto;
@@ -218,10 +203,6 @@ button:focus {
   font-weight: bold;
   text-align: center;
 }
-
-/* ------------------------------
-   Lists
------------------------------- */
 
 ul,
 ol,
@@ -241,71 +222,24 @@ dd {
   margin-left: 20px;
 }
 
-/* ------------------------------
-   Tables
------------------------------- */
-
-.table-container {
-  width: 100%;
-  overflow-x: auto;
-  margin: 24px 0;
-}
-
-table {
-  width: 100%;
-  min-width: 600px;
-  border-collapse: collapse;
-  background-color: #ffffff;
-}
-
-caption {
-  margin-bottom: 10px;
-  color: #333333;
-  font-weight: bold;
-  text-align: left;
-}
-
-th,
-td {
-  padding: 12px;
-  border: 1px solid #555555;
-  text-align: left;
-  vertical-align: top;
-}
-
-th {
-  background-color: #6c006c;
-  color: #ffffff;
-}
-
-tr:nth-child(even) {
-  background-color: #f4eafa;
-}
-
-/* ------------------------------
-   Forms
------------------------------- */
-
-form {
-  max-width: 700px;
-  margin: 24px 0;
-  padding: 24px;
-
-  background-color: #f7f7f7;
-  border: 1px solid #bbbbbb;
-  border-radius: 6px;
-}
-
-.form-group {
-  margin-bottom: 18px;
-}
-
 label {
   display: block;
   margin-bottom: 6px;
   color: #222222;
   font-weight: bold;
 }
+
+input,
+textarea,
+select {
+  width: 100%;
+  min-height: 46px;
+  padding: 10px;
+
+  border: 2px solid #555555;
+  border-radius: 4px;
+  color: #222222;
+  font: inherit;
 }
 
 textarea {
@@ -313,7 +247,6 @@ textarea {
   resize: vertical;
 }
 
-}
 
 .site-footer {
   margin-top: 40px;
@@ -323,16 +256,20 @@ textarea {
   font-size: 0.95rem;
 }
 
-/* ------------------------------
-   Mobile layout
------------------------------- */
 
 @media (max-width: 700px) {
   body {
     padding: 12px 8px;
     background-attachment: scroll;
     font-size: 16px;
+    background-image: none;
+    background-color: #d9edf7;
+  @media (max-width: 700px) 
+  
+  body > div {
+    width: 100%;
   }
+}
 
   .document {
     padding: 20px 16px;
@@ -363,10 +300,7 @@ textarea {
     width: 100%;
     text-align: center;
   }
+
   #countdown {
     font-size: 1.35rem;
   }
-
-  .content-card,
-  form {
-    padding: 16px;
