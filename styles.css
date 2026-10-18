@@ -1,20 +1,18 @@
-* {
-  box-sizing: border-box;
-}
+
 
 body {
   margin: 0;
-  padding: 100px 20px;
-
+  padding: 100px;
   color: #222;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 18px;
   line-height: 1.6;
+  background-color: #5a90ab;
 
-  background-color: #d9edf7;
-  background-image:
+  background-image: 
     url("left-image.JPG"),
     url("right-image.JPG");
+
   background-repeat: no-repeat, no-repeat;
   background-position: left top, right top;
   background-attachment: fixed, fixed;
@@ -22,12 +20,16 @@ body {
 }
 
 body > div {
-  width: min(900px, 100%);
-  min-height: 100vh;
+  width: min(900px, calc(100% - 40px));
   margin: 0 auto;
-  background-color: tan;
-  border-radius: 8px;
-  box-shadow: 0 0 18px rgba(0, 0, 0, 0.35);
+  background-color: white;
+}
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+th, td {
+  padding: 10px;
 }
 
 .document {
@@ -35,8 +37,10 @@ body > div {
   max-width: 1100px;
   margin: 0 auto;
   padding: 32px;
+
   background-color: #eee0ab;
   border-radius: 8px;
+  box-shadow: 0 0 18px rgba(0, 0, 0, 0.35);
 }
 
 .site-header {
@@ -142,9 +146,19 @@ select:focus {
 
 img {
   display: block;
-  width: 100%;
+  max-width: 100%;
   height: auto;
   border-radius: 6px;
+}
+
+.logo img {
+  width: 150px;
+}
+
+.content-image {
+  width: 100%;
+  max-width: 700px;
+  margin: 24px auto;
 }
 
 .content-image {
@@ -183,6 +197,33 @@ button {
   font: inherit;
   font-weight: bold;
   text-decoration: none;
+}
+
+.transcript summary {
+  display: inline-block;
+  margin-top: 12px;
+  padding: 10px 16px;
+  background: #6c006c;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+  list-style: none;
+}
+
+.transcript summary::-webkit-details-marker {
+  display: none;
+}
+
+.transcript[open] summary {
+  background: #460046;
+}
+
+.transcript > div {
+  margin-top: 12px;
+  padding: 16px;
+  background: #f4eafa;
+  border-left: 4px solid #6c006c;
 }
 
 .button:hover,
@@ -258,6 +299,7 @@ textarea {
   color: #333333;
   font-size: 0.95rem;
 }
+
 
 @media (max-width: 700px) {
   body {
