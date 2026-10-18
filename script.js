@@ -18,9 +18,23 @@ const x = setInterval(function () {
 
   if (distance < 0) {
     clearInterval(x);
-    countdown.textContent = "EXPIRED";
+    countdown.textContent = "COME TO PASS";
   } else {
     countdown.textContent =
       days + "d " + hours + "h " + minutes + "m " + seconds + "s";
   }
 }, 1000);
+
+
+const form = document.querySelector("#newsletterForm");
+const result = document.querySelector("#result");
+
+form.addEventListener("submit", (event) => {
+  event.preventDefault();
+
+  const formData = new FormData(form);
+  const firstName = formData.get("firstname");
+
+  result.textContent = `Thank you, ${firstName}! Your form was submitted.`;
+  form.reset();
+});
