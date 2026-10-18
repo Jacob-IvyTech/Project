@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<body>
+<style>
+  p {
+    text;
+  }
+</style>
+
+<h1>Join Our Newsletter!</h1>
+
+<form id="newsletterForm">
+  <label for="firstname">First name:</label><br>
+  <input type="text" id="firstname" name="firstname" required><br><br>
+
+  <label for="lastname">Last name:</label><br>
+  <input type="text" id="lastname" name="lastname" required><br><br>
+
+  <label for="email">Email address:</label><br>
+  <input type="email" id="email" name="email" required><br><br>
+
+  <input type="checkbox" id="Updates" name="Updates" value="ReceiveUpdates?" required>
+  <label for="Updates">I agree to receive newsletter information on a monthly basis</label><br><br><br>
+
+  <input type="submit" value="Submit">
+</form>
+
+<p id="result" aria-live="polite"></p>
+
+<p style="color:Red;">
+  Note: This form completion is for an assignment and in no way is your information kept or used to write emails.
+</p>
+
+<script src="script.js" defer></script>
+</body>
+</html>
